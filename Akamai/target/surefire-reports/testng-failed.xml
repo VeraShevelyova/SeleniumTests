@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Tests]">
+  <test name="Test1">
+    <classes>
+      <class name="selenium_tests.SampleTestNgTest"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test1(failed)">
+    <classes>
+      <class name="selenium_tests.SampleTestNgTest">
+        <methods>
+          <include name="initTestSuite"/>
+          <include name="initWebDriver"/>
+          <include name="tearDown"/>
+          <include name="testHomePageHasAHeader"/>
+        </methods>
+      </class> <!-- selenium_tests.SampleTestNgTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Tests] -->
