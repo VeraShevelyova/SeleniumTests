@@ -9,17 +9,11 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-/**
- * Sample page
- */
 public class JobsPage extends Page {
 
   public final String emptyJobsListId = "job_no_results_list_hldr";
   public final String jobResultsContentClass = "jResultsActive";
-
-  @FindBy(how = How.TAG_NAME, using = "h1")
-  @CacheLookup
-  public WebElement header;
+  private final String enterKeyCode = "\uE007";
 
   @FindBy(how = How.ID, using = "keyword")
   @CacheLookup
@@ -60,12 +54,11 @@ public class JobsPage extends Page {
 
   public void setLocation(String location){
     locationDiv.click();
-    WebElement textBox = locationList.findElement(By.className("default"));
+    WebElement locationTextBox = locationList.findElement(By.className("default"));
     Actions actions = new Actions(driver);
-    actions.moveToElement(textBox);
+    actions.moveToElement(locationTextBox);
     actions.sendKeys(location);
-    // click enter in order to select element
-    Action modifierKey = actions.sendKeys("\uE007").build();
+    Action modifierKey = actions.sendKeys(enterKeyCode).build();
     modifierKey.perform();
   }
 
@@ -82,8 +75,8 @@ public class JobsPage extends Page {
   }
 
   public Boolean isEmptyListResultsSentensePresent(String searchKeyWorld) {
-    String emptyListResultMessage = String.format("Your search matching keyword(s) %s did not return any job results.", searchKeyWorld);
-    Boolean isEmptyResultsSentencePresent = emptySearchResults.getText().equals(emptyListResultMessage);
+    String expectedEmptyListResultMessage = String.format("Your search matching keyword(s) %s did not return any job results.", searchKeyWorld);
+    Boolean isEmptyResultsSentencePresent = emptySearchResults.getText().equals(expectedEmptyListResultMessage);
     return isEmptyResultsSentencePresent;
   }
 }
