@@ -1,7 +1,7 @@
 # SeleniumTests
 How to run the tests
  
- 1) Open git basj and navigate to the directory where you want to place the project;
+ 1) Open git bash and navigate to the directory where you want to place the project;
 
  2) Execute command
 
@@ -11,11 +11,11 @@ How to run the tests
 
 
     
- 3) Open the projetc in the IDEA
+ 3) Open the project in the IDEA
 
  4) Navigate to the \SeleniumTests\Akamai\src\test\java\selenium_tests\runners folder
 
- 5) Selet any class file, open it and click on the arrow next to the class name
+ 5) Select any class file, open it and click on the arrow next to the class name
 
 
  
@@ -36,6 +36,6 @@ How to run the tests
 
 
   file
-  
-4) Click arror next to any method(to run one test case) or next to the class(to run all test cases)
+  it 
+4) Click arrow next to any method(to run one test case) or next to the class(to run all test cases)
  
