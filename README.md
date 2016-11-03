@@ -11,27 +11,8 @@ How to run the tests
  
  Also there is an opportunity to run the tests using testng
  1) Open \SeleniumTests\Akamai\src\test\resources\testng.xml file
- 2) Uncomment 
- <!--?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Tests" verbose="5">
-  <test name="Test1">
-    <classes>
-      <class name="selenium_tests.testNgTests.JobsSearchTest"/>
-    </classes>
-  </test>
-</suite-->
-and comment 
-
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test runner" parallel="classes" thread-count="2">
-  <test name="Package with subpackages">
-    <packages>
-      <package name="selenium_tests.runners.*"/>
-    </packages>
-  </test>
-</suite>
-
-3) Go to the \SeleniumTests\Akamai\src\test\java\selenium_tests\testNgTests\JobsSearchTest.java file
+ 2) Uncomment first part with suite name="TestNgTests" 
+ 3) Comment second part with suite name="BDDTests"
+  4) Go to the \SeleniumTests\Akamai\src\test\java\selenium_tests\testNgTests\JobsSearchTest.java file
 4) Click arror next to any method(to run one test case) or next to the class(to run all test cases)
  

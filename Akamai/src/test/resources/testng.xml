@@ -1,6 +1,6 @@
 <!--?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Tests" verbose="5">
+<suite name="TestNgTests" verbose="5">
   <test name="Test1">
     <classes>
       <class name="selenium_tests.testNgTests.JobsSearchTest"/>
@@ -8,7 +8,7 @@
   </test>
 </suite-->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test runner" parallel="classes" thread-count="2">
+<suite name="BDDTests" parallel="classes" thread-count="2">
   <test name="Package with subpackages">
     <packages>
       <package name="selenium_tests.runners.*"/>
