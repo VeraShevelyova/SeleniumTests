@@ -23,10 +23,9 @@ public abstract class Page {
     this.driver = driver;
   }
 
-  public String getTitle() {
-    return driver.getTitle();
+  public void open(String url){
+    driver.get(url);
   }
-
   public boolean isElementPresent(By by){
     try{
       driver.findElement(by);
@@ -39,13 +38,14 @@ public abstract class Page {
 
   public WebElement fluientWaitforElement(WebElement element, int timoutSec, int pollingSec) {
 
+
     FluentWait<WebDriver> fWait = new FluentWait<WebDriver>(driver).withTimeout(timoutSec, TimeUnit.SECONDS)
             .pollingEvery(pollingSec, TimeUnit.SECONDS)
             .ignoring(NoSuchElementException.class, TimeoutException.class).ignoring(StaleElementReferenceException.class);
 
     for (int i = 0; i < 2; i++) {
       try {
-        fWait.until(ExpectedConditions.visibilityOf(element));
+       // fWait.until(ExpectedConditions.visibilityOf(element));
         fWait.until(ExpectedConditions.elementToBeClickable(element));
       } catch (Exception e) {
 

@@ -1,5 +1,0 @@
-selenium_tests\pages\HomePage.class
-selenium_tests\pages\Page.class
-selenium_tests\util\PropertyLoader.class
-selenium_tests\TestNgTestBase.class
-selenium_tests\SampleTestNgTest.class
