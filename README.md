@@ -36,6 +36,6 @@ How to run the tests
 
 
   file
-  it 
-4) Click arrow next to any method(to run one test case) or next to the class(to run all test cases)
+  
+5) Click arrow next to any method(to run one test case) or next to the class(to run all test cases)
  
