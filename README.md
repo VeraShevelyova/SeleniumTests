@@ -7,7 +7,7 @@ How to run the tests
 
 
 
-    $ git clone git://github.com/SpringSource/spring-data-graph-examples.git
+    $ git clone https://github.com/VeraShevelyova/SeleniumTests.git
 
 
     
